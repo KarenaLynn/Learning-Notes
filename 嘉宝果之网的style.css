@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFC0CB;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .main {
+    display: flex; /* 启用 Flexbox 布局 */
+    margin-top: 20px;
+  }
+  
+  .left-column, .right-column {
+    flex: 1; /* 让左右两列平分宽度 */
+    padding: 10px;
+  }
+  
+  .footer {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+
+  /* 新增图片容器样式 */
+  .img-container {
+    position: relative; /* 关键定位 */
+    display: inline-block; /* 让容器包裹图片 */
+  }
+
+  .img {
+    border:3px solid #52020f;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px;
+    width: 132px;
+    margin-top: 10px;
+  }
+  
+  .img:hover {
+    box-shadow: 2px 2px 0px;
+    transition: box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .img-container::after {
+    content: "华农看花"; /* 显示的文字 */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.3s ease; /* 过渡效果 */
+  }
+
+  .img-container:hover::after {
+    opacity: 1; /* 悬停时显示 */
+  }
+
+  a {
+    color:rgb(138, 52, 52);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color:rgb(47, 128, 101);
+  }
+ 
+  /*响应式设计（为了页面在移动设备上也能良好显示）*/
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2em;
+  }
+
+  nav a {
+      display: block;
+      margin: 5px 0;
+  }
+
+  .era-box {
+      padding: 15px;
+  }
+}
